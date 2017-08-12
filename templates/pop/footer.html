@@ -1,0 +1,56 @@
+<div id="google_translate_element"></div><script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'cs', layout: google.translate.TranslateElement.FloatPosition.TOP_LEFT, gaTrack: true, gaId: 'UA-42637976-1'}, 'google_translate_element');
+}
+</script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+          
+
+<!--
+<script type="text/javascript">
+(function($) {
+
+$(document).ready(function() {
+	$('.b-detail').html('Detail');
+	$('input[type=submit].b-cart2').val('Koupit');
+	$('#header-cart a[href="/kosik/"]').html('<span class="button">Košík</span>');
+
+	$('.action-icon').parent().addClass('action-icon sticker').find('img').replaceWith('Akce');
+	$('.new-icon').parent().addClass('new-icon sticker').find('img').replaceWith('Nové');
+	$('.tip-icon').parent().addClass('tip-icon sticker').find('img').replaceWith('Tip');
+
+	$('.action-detail-icon').replaceWith('<span class="action-icon sticker">Akce</span>');
+	$('.new-detail-icon').replaceWith('<span class="new-icon sticker">Nové</span>');
+	$('.tip-detail-icon').replaceWith('<span class="tip-icon sticker">Tip</span>');
+
+/*
+TODO: set ignoreClass option before Cufon.replace() is called
+Cufon.DOM.ready(function() {
+	$("cufon").each(function(){
+		var text = $("cufontext", this).text();
+		$(this).replaceWith(text);
+	});
+});
+*/
+
+	var path = '/cms/img/payment_logos/paypal.gif';
+	$("#onlinePayments [data-alt=eKonto] span[data-src='/cms/img/payment_logos/eKonto.gif']").attr('data-src', path);
+	$("#onlinePayments [data-alt=eKonto] img").attr('src', path);
+
+	// phone is required only for PPL delivery
+	$("#phone").parent().append("Telefon je povinný pouze pro dopravu PPL.");
+});
+
+
+})(jQuery);
+
+-->
+
+<!--Start of Zopim Live Chat Script-->
+<script type="text/javascript">
+window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
+d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
+_.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute('charset','utf-8');
+$.src='//cdn.zopim.com/?1oBLvIFU4MkOtLA1JYM6Y5Rd2elzuRgS';z.t=+new Date;$.
+type='text/javascript';e.parentNode.insertBefore($,e)})(document,'script');
+</script>
+<!--End of Zopim Live Chat Script-->
