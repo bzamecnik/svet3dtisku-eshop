@@ -1,0 +1,117 @@
+<style type="text/css">
+
+.box-categories, .slider-wrapper, #footer .site-name {
+  display: none;
+}
+
+/* red top panel and black menu */
+
+#header {
+  background-color: #e71c36;
+}
+
+.header-top {
+  background-color: #e71c36;
+  margin-left: -20px;
+  margin-right: -20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.site-name {
+  margin: 0;
+}
+
+/* menu */
+
+.navigation-in {
+  background-color: #222;
+}
+
+.navigation-in > ul > li {
+  border: 0;
+  padding-top: 0;
+  line-height: 18px;
+}
+
+#menu-header {
+  background: #222;
+}
+
+/* search box */
+
+.header-top .search .query-input {
+  background-color: #e71c36;
+  color: white;
+  border-color: white;
+  border-radius: 0;
+}
+
+.header-top .search ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+  color: white;
+}
+.header-top .search :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  color: white;
+  opacity: 1;
+}
+.header-top .search ::-moz-placeholder { /* Mozilla Firefox 19+ */
+  color: white;
+  opacity: 1;
+}
+.header-top .search :-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: white;
+}
+.header-top .search ::-ms-input-placeholder { /* Microsoft Edge */
+  color: white;
+}
+
+.header-top .search button[type=submit] {
+  background: white;
+  color: #e71c36;
+  border-color: white;
+}
+
+/* cart - white on red background, except for mobile */
+
+@media (min-width: 768px) {
+  .header-top .icon-cart, .header-top .icon-cart span {
+    color: white;
+  }
+
+  .header-top .icon-cart i {
+    background: white;
+    color: #e71c36;
+  }
+}
+
+/* parametric filter - images */
+
+.advanced-parameter-inner {
+  border: 0;
+  box-shadow: none;
+  line-height: 0;
+}
+
+/* footer */
+
+.custom-footer {
+  padding-left: 0;
+}
+
+/* theme fixes */
+
+/* fix: white text on white background */
+.pagination > strong {
+  color: inherit;
+}
+
+.menu-helper {
+  display: none;
+}
+
+/* disable Shoptet mobile menu toggle */
+.responsive-tools>a[data-target="navigation"] {
+  display: none;
+}
+
+</style>
