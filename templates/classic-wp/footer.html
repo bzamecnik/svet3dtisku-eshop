@@ -26,19 +26,32 @@ $(document).ready(function(){
 
     // ## add styles from WP
     var styles = page.filter("style,link[rel=stylesheet]");
-    styles.each(function(i, s) {$("head").append(s);});
+    styles.each(function(i, s) {
+      $("head").append(s);
+    });
 
     // ## replace menu
-    $("#navigation").replaceWith($(".ubermenu-main", htmlStr));
-    $(".ubermenu-main").parent().append($(".ubermenu-responsive-toggle", htmlStr));
+    // $("#navigation").replaceWith($(".ubermenu-main", htmlStr));
+    // with fade animation
+    $('#navigation').fadeOut("slow", function(){
+        var newmenu = $(".ubermenu-main", htmlStr);
+        var newmenutoggle = $(".ubermenu-responsive-toggle", htmlStr)
+        newmenu.hide();
+        // newmenutoggle.hide();
+        $(this).replaceWith(newmenu);
+        $(".ubermenu-main").parent().append(newmenutoggle);
+
+        // must be loaded after the page is loaded
+        $.getScript("https://3dprintworld.cz/wp-content/plugins/ubermenu/assets/js/ubermenu.min.js?ver=3.3");
+
+        newmenu.fadeIn("slow");
+        // newmenutoggle.fadeIn("slow");
+    });
 
     // ## replace footer
     // Fucking jQuery it not able to parse the whole HTML tree!
     // https://stackoverflow.com/questions/7331149/how-to-parse-returned-page-html-with-jquery-get
     $("#footer").html($("#main-footer", htmlStr));
-
-    // must be loaded after the page is loaded
-    $.getScript("https://3dprintworld.cz/wp-content/plugins/ubermenu/assets/js/ubermenu.min.js?ver=3.3");
 
     $("body").addClass("et_pb_gutters3");
     $("#main-footer img").addClass("et-animated");
@@ -63,6 +76,35 @@ var et_pb_custom = {"ajaxurl":"https:\/\/3dprintworld.cz\/wp-admin\/admin-ajax.p
 var ubermenu_data = {"remove_conflicts":"on","reposition_on_load":"off","intent_delay":"300","intent_interval":"100","intent_threshold":"7","scrollto_offset":"50","scrollto_duration":"1000","responsive_breakpoint":"1005","accessible":"on","retractor_display_strategy":"responsive","touch_off_close":"on","collapse_after_scroll":"on","v":"3.3","configurations":["main"],"ajax_url":"https:\/\/3dprintworld.cz\/wp-admin\/admin-ajax.php","plugin_url":"https:\/\/3dprintworld.cz\/wp-content\/plugins\/ubermenu\/","disable_mobile":"off"};
 /* ]]> */
 </script>
+
+<style>
+/* cannot be in the header, otherwise it gets overridden */
+.ubermenu, .ubermenu-nav {
+  z-index: auto;
+}
+
+@media (min-width: 768px) {
+  .container {
+      width: 747px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+      width: 972px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+      width: 1178px;
+  }
+}
+@media (min-width: 1440px) {
+  .container {
+      width: 1418px;
+  }
+}
+</style>
+
 
 <!-- Google Translate -->
 <div id="google_translate_element"></div><script type="text/javascript">

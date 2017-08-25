@@ -132,8 +132,13 @@ body.in-index .products.products-block>div {
   display: none;
 }
 
-.ubermenu, .ubermenu-nav {
-  z-index: auto;
+.top-navigation-bar-menu li a {
+  line-height: 1;
 }
 
+/* hide the original menu until it's replaced with the new one - prevent blinking */
+#navigation {
+  height: 46px;
+  visibility: hidden;
+}
 </style>
