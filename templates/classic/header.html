@@ -25,7 +25,7 @@
 /* menu */
 
 .navigation-in {
-  background-color: #222;
+  background-color: #333;
 }
 
 .navigation-in > ul > li {
@@ -35,7 +35,7 @@
 }
 
 #menu-header {
-  background: #222;
+  background: #333;
 }
 
 /* search box */
@@ -92,6 +92,24 @@
   line-height: 0;
 }
 
+/* product grid - fix: 4-columns in home page */
+
+body.in-index .products.products-block>div {
+    width: 25%;
+}
+
+@media (min-width: 1200px) {
+    body.in-index .products.products-block>div:nth-child(3n) {
+        border-right-style: solid;
+    }
+    body.in-index .products.products-block>div:nth-child(4n) {
+        border-right-style: none;
+    }
+    body.in-index .products.products-block>div:nth-child(4) {
+        border-top-style: none;
+    }
+}
+
 /* footer */
 
 .custom-footer {
@@ -103,6 +121,19 @@
 /* fix: white text on white background */
 .pagination > strong {
   color: inherit;
+}
+
+.menu-helper {
+  display: none;
+}
+
+/* disable Shoptet mobile menu toggle */
+.responsive-tools>a[data-target="navigation"] {
+  display: none;
+}
+
+.ubermenu, .ubermenu-nav {
+  z-index: auto;
 }
 
 </style>
