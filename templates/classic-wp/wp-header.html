@@ -1,0 +1,362 @@
+<div class="top-navigation-bar">
+  <div class="container">
+    <div class="top-navigation-contacts">
+      <strong>Zákaznická podpora:</strong>
+      <a href="mailto:info@svet-3d-tisku.cz" class="project-email"><span>info@svet-3d-tisku.cz</span></a>
+    </div>
+    <div class="top-navigation-menu">
+      <div class="top-navigation-menu-trigger"></div>
+      <ul class="top-navigation-bar-menu">
+        <li>
+          <a href="https://www.massportal.cz" title="Mass Portal" target="blank">
+            <b>Mass Portal</b>
+          </a>
+        </li>
+        <li>
+          <a href="http://www.facebook.com/svet3dtisku" title="Facebook" target="blank">
+            <b>Facebook</b>
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/svet3dtisku" title="Twitter" target="blank">
+            <b>Twitter</b>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="top-navigation-tools">
+      <div class="responsive-tools">
+        <a href="#" class="toggle-window" data-target="search"></a>
+        <a href="#" class="toggle-window" data-target="login"></a>
+        <a href="#" class="toggle-window" data-target="navigation"></a>
+      </div>
+      <div class="dropdown">
+        <span>Ceny v:</span>
+        <button id="topNavigationDropdown" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            CZK
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="topNavigationDropdown">
+          <li>
+            <a href="/action/Currency/changeCurrency/?currencyCode=CZK" title="CZK">CZK</a>
+          </li>
+          <li>
+            <a href="/action/Currency/changeCurrency/?currencyCode=EUR" title="EUR">EUR</a>
+          </li>
+        </ul>
+      </div>
+      <a href="/login/" class="top-nav-button primary login toggle-window hovered" data-target="login" data-hover="true"><span>Přihlášení</span></a>
+    </div>
+  </div>
+</div>
+
+<header id="header">
+  <div class="container">
+    <div class="header-top">
+      <div>
+        <div class="site-name">
+          <a href="/" title="SVĚT 3D TISKU">
+            <img src="https://cdn.myshoptet.com/usr/eshop.svet-3d-tisku.cz/user/logos/svet3dtisku_logo_bile-1.png" alt="SVĚT 3D TISKU">
+          </a>
+        </div>
+      </div>
+      <div class="search">
+        <form action="/action/ProductSearch/prepareString/" method="post" class="search-form compact-form" itemprop="potentialAction" itemscope="" itemtype="https://schema.org/SearchAction">
+          <fieldset>
+            <meta itemprop="target" content="https://eshop.svet-3d-tisku.cz/vyhledavani/?string={string}">
+            <input type="hidden" name="language" value="cs">
+            <input type="search" name="string" class="query-input form-control" placeholder="Napište co hledáte" autocomplete="off" required="" itemprop="query-input">
+            <div class="search-whisperer"></div>
+            <button type="submit" class="btn btn-default">Hledat</button>
+          </fieldset>
+        </form>
+      </div>
+      <div>
+        <a href="/kosik/" class="btn btn-icon toggle-window icon-cart full hovered" data-target="cart" data-hover="true" data-redirect="true" data-decseparator=",">
+          <span class="sr-only">Nákupní košík</span>
+        </a>
+      </div>
+    </div>
+</header>
+
+<style>
+
+  .top-navigation-bar .login, .top-navigation-bar .logout {
+    display: none
+  }
+
+  .top-navigation-bar .container>div {
+    display: none
+  }
+
+  .top-navigation-bar .container>div.top-navigation-tools {
+    display: block
+  }
+
+  .top-navigation-bar .dropdown {
+    position: absolute;
+    left: 105px;
+    top: 23px;
+    display: inline-block
+  }
+
+  .top-navigation-bar .dropdown>span {
+    display: none
+  }
+
+  .top-navigation-bar .dropdown button {
+    position: relative;
+    padding-right: 1.5em;
+    border: 0;
+    background: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none
+  }
+
+  .top-navigation-bar .dropdown button:focus {
+    outline: 0
+  }
+
+  .top-navigation-bar .dropdown .dropdown-menu {
+    left: auto;
+    right: -10px
+  }
+
+  .top-navigation-bar .dropdown .caret {
+    border: 0;
+    font-size: 12px
+  }
+
+  .top-navigation-bar .dropdown .caret::before {
+    content: '\e610';
+    display: inline-block;
+    speak: none;
+    vertical-align: middle;
+    font-family: shoptet;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    line-height: 1;
+    text-transform: none;
+    text-decoration: none;
+    position: absolute;
+    right: .25em;
+    top: 50%;
+    width: 14px;
+    height: 14px;
+    margin-top: -7px;
+    line-height: 15px
+  }
+
+  @media (max-width: 767px) {
+    .navigation-window-visible .top-navigation-bar .container>div.top-navigation-contacts, .navigation-window-visible .top-navigation-bar .container>div.top-navigation-menu {
+      display: block;
+      z-index: 53;
+      position: fixed
+    }
+    .navigation-window-visible .top-navigation-bar .container>div.top-navigation-menu {
+      left: 120px;
+      right: 10px;
+      bottom: 18px
+    }
+    .navigation-window-visible .top-navigation-bar .container>div.top-navigation-contacts {
+      left: 20px;
+      bottom: 20px
+    }
+  }
+
+  @media (min-width: 768px) {
+    .top-navigation-bar {
+      border-top-style: solid;
+      border-top-width: 1px;
+      border-bottom-style: solid;
+      border-bottom-width: 1px;
+      font-size: 12px
+    }
+    .top-navigation-bar .login, .top-navigation-bar .logout {
+      display: inline
+    }
+    .top-navigation-bar .dropdown {
+      position: relative;
+      left: 0;
+      top: 0;
+      margin-right: 1ex
+    }
+    .top-navigation-bar .container {
+      display: flex;
+      align-items: center
+    }
+    .top-navigation-bar .container>div {
+      display: block;
+      flex: 1 1 40%;
+      text-align: center
+    }
+    .top-navigation-bar .container>div:last-child, .top-navigation-bar .container>div:first-child {
+      flex-basis: 30%
+    }
+    .top-navigation-bar .container>div:first-child {
+      text-align: left
+    }
+    .top-navigation-bar .container>div:last-child {
+      text-align: right
+    }
+  }
+
+
+  .top-navigation-bar {
+    border-top-color: #dadada;
+    border-bottom-color: #dadada;
+    background-color: #fff
+  }
+
+  .top-navigation-bar a, .top-navigation-bar .dropdown button {
+    color: #999
+  }
+
+  .top-navigation-bar a:hover, .top-navigation-bar .dropdown button:hover {
+    color: #e71c36
+  }
+
+  /* header */
+
+
+  #header {
+    margin-bottom: 19px
+  }
+
+  #header .container {
+    position: relative
+  }
+
+  #header .site-name {
+    text-align: center
+  }
+
+  #header .site-name a {
+    display: block
+  }
+
+  #header .site-name a img {
+    display: block;
+    margin: 0 auto;
+    max-height: 60px
+  }
+
+  #header .site-name a.text-logo {
+    padding-top: 4px;
+    padding-left: 4px;
+    font-size: 14px
+  }
+
+  #header .site-name a.text-logo small {
+    display: block;
+    padding-top: 5px
+  }
+
+  #header .icon-cart {
+    position: absolute;
+    right: 50px;
+    top: -49px;
+    border: 0
+  }
+
+  .ordering-process #header {
+    margin-bottom: 0
+  }
+
+  @media (max-width: 767px) {
+    #header .search-form {
+      display: none
+    }
+    .search-window-visible #header .search-form {
+      display: block;
+      margin: 20px 0
+    }
+  }
+
+  @media (min-width: 768px) {
+    #header {
+      margin-bottom: 0
+    }
+    #header .site-name {
+      text-align: left
+    }
+    #header .site-name a img {
+      margin: 0
+    }
+    #header .icon-cart {
+      position: relative;
+      left: 0;
+      right: auto;
+      top: 0;
+      display: inline-block
+    }
+    .ordering-process #header {
+      border-bottom-style: solid;
+      border-bottom-width: 1px
+    }
+  }
+
+  @media (max-width: 767px) {
+    .ordering-process .site-name {
+      display: none
+    }
+  }
+
+  @media (min-width: 768px) {
+    .header-top {
+      display: flex;
+      flex-wrap: wrap;
+      padding-top: 19px;
+      padding-bottom: 19px
+    }
+    .header-top>div {
+      flex: 0 1 33.333333%;
+      align-self: center
+    }
+    .header-top>div:last-child {
+      text-align: right
+    }
+  }
+
+  .header-top .btn.icon-cart {
+    position: relative;
+    padding: 0;
+    font-size: 16px
+  }
+
+  .header-top .btn.icon-cart i {
+    position: absolute;
+    left: 26px;
+    top: 0;
+    width: 16px;
+    height: 16px;
+    padding: 2px;
+    font-size: 12px;
+    font-style: normal;
+    line-height: 12px;
+    border-radius: 50%
+  }
+
+  .header-top .btn.icon-cart::before {
+    vertical-align: middle;
+    margin-right: 20px;
+    font-size: 30px
+  }
+
+  .header-top .icon-cart i {
+    color: #fff;
+    background-color: #e71c36
+  }
+
+  .header-top .icon-cart span {
+    color: #666
+  }
+
+  #header {
+    border-bottom-color: #dadada;
+    background-color: #fff
+  }
+
+</style>
