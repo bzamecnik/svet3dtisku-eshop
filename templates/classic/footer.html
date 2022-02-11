@@ -8,22 +8,22 @@ $(".category-perex").detach().insertAfter($(".category-title"));
 $(".latest-contribution.latest-contribution-rating").insertAfter(".scoreBox");
 </script>
 
-<script type='text/javascript' src='https://wp.3dprintworld.cz/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<!-- <script type='text/javascript' src='https://wp.3dprintworld.cz/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script> -->
 
 <script>
 // some strange JS that provide a function that's bound on style.onload
 //var et_site_url='https://wp.3dprintworld.cz';var et_post_id='5852';function et_core_page_resource_fallback(a,b){"undefined"===typeof b&&(b=a.sheet.cssRules&&0===a.sheet.cssRules.length);b&&(a.onerror=null,a.onload=null,a.href?a.href=et_site_url+"/?et_core_page_resource="+a.id+et_post_id:a.src&&(a.src=et_site_url+"/?et_core_page_resource="+a.id+et_post_id))}
 
-var et_site_url = 'https://wp.3dprintworld.cz';
-var et_post_id = '5852';
-
-function et_core_page_resource_fallback(a, b) {
-  //console.log('a: ' + a, ', b: ' + b);
-  //console.log('a.href: ' + a.href);
-  //console.log('a.sheet: ' + a.sheet);
-  //"undefined" === typeof b && (b = a.sheet.cssRules && 0 === a.sheet.cssRules.length);
-  //b && (a.onerror = null, a.onload = null, a.href ? a.href = et_site_url + "/?et_core_page_resource=" + a.id + et_post_id : a.src && (a.src = et_site_url + "/?et_core_page_resource=" + a.id + et_post_id))
-}
+// var et_site_url = 'https://wp.3dprintworld.cz';
+// var et_post_id = '5852';
+//
+// function et_core_page_resource_fallback(a, b) {
+//   //console.log('a: ' + a, ', b: ' + b);
+//   //console.log('a.href: ' + a.href);
+//   //console.log('a.sheet: ' + a.sheet);
+//   //"undefined" === typeof b && (b = a.sheet.cssRules && 0 === a.sheet.cssRules.length);
+//   //b && (a.onerror = null, a.onload = null, a.href ? a.href = et_site_url + "/?et_core_page_resource=" + a.id + et_post_id : a.src && (a.src = et_site_url + "/?et_core_page_resource=" + a.id + et_post_id))
+// }
 </script>
 
 <script>
@@ -44,11 +44,11 @@ $(document).ready(function(){
   // # Using custom Ubermenu and footer from a separate WordPress site.
   // NOTE: It must have CORS enabled for the eshop domain.
 
-  var lang = document.getElementsByTagName('html')[0].getAttribute('lang');
-  var menuUrl = "https://wp.3dprintworld.cz/shoptet-menu/";
-  if (lang == 'en') {
-      menuUrl = "https://wp.3dprintworld.cz/en/shoptet-menu/";
-  }
+  // var lang = document.getElementsByTagName('html')[0].getAttribute('lang');
+  // var menuUrl = "https://wp.3dprintworld.cz/shoptet-menu/";
+  // if (lang == 'en') {
+  //     menuUrl = "https://wp.3dprintworld.cz/en/shoptet-menu/";
+  // }
 
   $.get(menuUrl, function(htmlStr) {
     var page = $($.parseHTML(htmlStr));
@@ -62,20 +62,21 @@ $(document).ready(function(){
     // ## replace menu
     // $("#navigation").replaceWith($(".ubermenu-main", htmlStr));
     // with fade animation
-    $('#navigation').fadeOut("slow", function(){
-        var newmenu = $(".ubermenu-main", htmlStr);
-        var newmenutoggle = $(".ubermenu-responsive-toggle", htmlStr)
-        newmenu.hide();
-        // newmenutoggle.hide();
-        $(this).replaceWith(newmenu);
-        $(".ubermenu-main").parent().append(newmenutoggle);
-
-        // must be loaded after the page is loaded
-         $.getScript("https://wp.3dprintworld.cz/wp-content/plugins/ubermenu/assets/js/ubermenu.min.js?ver=3.3");
-
-        newmenu.fadeIn("slow");
-        // newmenutoggle.fadeIn("slow");
-    });
+    // ## menu from wordpress disabled:
+    // $('#navigation').fadeOut("slow", function(){
+    //     var newmenu = $(".ubermenu-main", htmlStr);
+    //     var newmenutoggle = $(".ubermenu-responsive-toggle", htmlStr)
+    //     newmenu.hide();
+    //     // newmenutoggle.hide();
+    //     $(this).replaceWith(newmenu);
+    //     $(".ubermenu-main").parent().append(newmenutoggle);
+    //
+    //     // must be loaded after the page is loaded
+    //      $.getScript("https://wp.3dprintworld.cz/wp-content/plugins/ubermenu/assets/js/ubermenu.min.js?ver=3.3");
+    //
+    //     newmenu.fadeIn("slow");
+    //     // newmenutoggle.fadeIn("slow");
+    // });
 
     // ## replace footer
 
@@ -97,24 +98,24 @@ $(document).ready(function(){
 
 <script type='text/javascript'>
 /* <![CDATA[ */
-var wpml_browser_redirect_params = {"pageLanguage":"cs","languageUrls":{"cs_CZ":"https:\/\/wp.3dprintworld.cz\/shoptet-menu\/","cs":"https:\/\/wp.3dprintworld.cz\/shoptet-menu\/","CZ":"https:\/\/wp.3dprintworld.cz\/shoptet-menu\/","en_US":"https:\/\/wp.3dprintworld.cz\/en\/shoptet-menu\/","en":"https:\/\/wp.3dprintworld.cz\/en\/shoptet-menu\/","US":"https:\/\/wp.3dprintworld.cz\/en\/shoptet-menu\/"},"cookie":{"name":"_icl_visitor_lang_js","domain":"wp.3dprintworld.cz","path":"\/","expiration":24}};
+// var wpml_browser_redirect_params = {"pageLanguage":"cs","languageUrls":{"cs_CZ":"https:\/\/wp.3dprintworld.cz\/shoptet-menu\/","cs":"https:\/\/wp.3dprintworld.cz\/shoptet-menu\/","CZ":"https:\/\/wp.3dprintworld.cz\/shoptet-menu\/","en_US":"https:\/\/wp.3dprintworld.cz\/en\/shoptet-menu\/","en":"https:\/\/wp.3dprintworld.cz\/en\/shoptet-menu\/","US":"https:\/\/wp.3dprintworld.cz\/en\/shoptet-menu\/"},"cookie":{"name":"_icl_visitor_lang_js","domain":"wp.3dprintworld.cz","path":"\/","expiration":24}};
 /* ]]> */
 </script>
 
-<script type='text/javascript' src='https://wp.3dprintworld.cz/wp-content/plugins/sitepress-multilingual-cms/res/js/browser-redirect.js?ver=3.7.1'></script>
+<!-- <script type='text/javascript' src='https://wp.3dprintworld.cz/wp-content/plugins/sitepress-multilingual-cms/res/js/browser-redirect.js?ver=3.7.1'></script> -->
 
 <script type='text/javascript'>
 /* <![CDATA[ */
-var et_shortcodes_strings = {"previous":"P\u0159edchoz\u00ed","next":"N\u00e1sleduj\u00edc\u00ed"};
-var et_pb_custom = {"ajaxurl":"https:\/\/wp.3dprintworld.cz\/wp-admin\/admin-ajax.php","images_uri":"https:\/\/wp.3dprintworld.cz\/wp-content\/themes\/Divi\/images","builder_images_uri":"https:\/\/wp.3dprintworld.cz\/wp-content\/themes\/Divi\/includes\/builder\/images","et_frontend_nonce":"bf27fa624b","subscription_failed":"Pros\u00edm, zkontrolujte, zda pole n\u00ed\u017ee a ujist\u011bte se, \u017ee jste zadali spr\u00e1vn\u00e9 informace.","et_ab_log_nonce":"ff34076b38","fill_message":"Vypl\u0148te pros\u00edm n\u00e1sleduj\u00edc\u00ed pol\u00ed\u010dka:","contact_error_message":"Opravte pros\u00edm n\u00e1sleduj\u00edc\u00ed chyby:","invalid":"Neplatn\u00e1 e-mailov\u00e1 adresa","captcha":"Captcha","prev":"P\u0159edchoz\u00ed","previous":"P\u0159edchoz\u00ed","next":"Dal\u0161\u00ed","wrong_captcha":"V k\u00f3du CAPTCHA jste zadali nespr\u00e1vnou \u010d\u00edslici.","is_builder_plugin_used":"","ignore_waypoints":"no","is_divi_theme_used":"1","widget_search_selector":".widget_search","is_ab_testing_active":"","page_id":"5852","unique_test_id":"","ab_bounce_rate":"5","is_cache_plugin_active":"yes","is_shortcode_tracking":""};
+// var et_shortcodes_strings = {"previous":"P\u0159edchoz\u00ed","next":"N\u00e1sleduj\u00edc\u00ed"};
+// var et_pb_custom = {"ajaxurl":"https:\/\/wp.3dprintworld.cz\/wp-admin\/admin-ajax.php","images_uri":"https:\/\/wp.3dprintworld.cz\/wp-content\/themes\/Divi\/images","builder_images_uri":"https:\/\/wp.3dprintworld.cz\/wp-content\/themes\/Divi\/includes\/builder\/images","et_frontend_nonce":"bf27fa624b","subscription_failed":"Pros\u00edm, zkontrolujte, zda pole n\u00ed\u017ee a ujist\u011bte se, \u017ee jste zadali spr\u00e1vn\u00e9 informace.","et_ab_log_nonce":"ff34076b38","fill_message":"Vypl\u0148te pros\u00edm n\u00e1sleduj\u00edc\u00ed pol\u00ed\u010dka:","contact_error_message":"Opravte pros\u00edm n\u00e1sleduj\u00edc\u00ed chyby:","invalid":"Neplatn\u00e1 e-mailov\u00e1 adresa","captcha":"Captcha","prev":"P\u0159edchoz\u00ed","previous":"P\u0159edchoz\u00ed","next":"Dal\u0161\u00ed","wrong_captcha":"V k\u00f3du CAPTCHA jste zadali nespr\u00e1vnou \u010d\u00edslici.","is_builder_plugin_used":"","ignore_waypoints":"no","is_divi_theme_used":"1","widget_search_selector":".widget_search","is_ab_testing_active":"","page_id":"5852","unique_test_id":"","ab_bounce_rate":"5","is_cache_plugin_active":"yes","is_shortcode_tracking":""};
 /* ]]> */
 </script>
 
-<script type='text/javascript' src='https://wp.3dprintworld.cz/wp-content/themes/Divi/js/custom.min.js?ver=3.0.66'></script>
+<!-- <script type='text/javascript' src='https://wp.3dprintworld.cz/wp-content/themes/Divi/js/custom.min.js?ver=3.0.66'></script> -->
 
 <script type='text/javascript'>
 /* <![CDATA[ */
-var ubermenu_data = {"remove_conflicts":"on","reposition_on_load":"off","intent_delay":"300","intent_interval":"100","intent_threshold":"7","scrollto_offset":"50","scrollto_duration":"1000","responsive_breakpoint":"1005","accessible":"on","retractor_display_strategy":"responsive","touch_off_close":"on","collapse_after_scroll":"on","v":"3.3","configurations":["main"],"ajax_url":"https:\/\/wp.3dprintworld.cz\/wp-admin\/admin-ajax.php","plugin_url":"https:\/\/wp.3dprintworld.cz\/wp-content\/plugins\/ubermenu\/","disable_mobile":"off"};
+// var ubermenu_data = {"remove_conflicts":"on","reposition_on_load":"off","intent_delay":"300","intent_interval":"100","intent_threshold":"7","scrollto_offset":"50","scrollto_duration":"1000","responsive_breakpoint":"1005","accessible":"on","retractor_display_strategy":"responsive","touch_off_close":"on","collapse_after_scroll":"on","v":"3.3","configurations":["main"],"ajax_url":"https:\/\/wp.3dprintworld.cz\/wp-admin\/admin-ajax.php","plugin_url":"https:\/\/wp.3dprintworld.cz\/wp-content\/plugins\/ubermenu\/","disable_mobile":"off"};
 /* ]]> */
 </script>
 

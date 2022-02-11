@@ -119,24 +119,24 @@ body.in-index .products.products-block>div {
   color: inherit;
 }
 
-.menu-helper {
+/* .menu-helper {
   display: none;
-}
+} */
 
 /* disable Shoptet mobile menu toggle */
-.responsive-tools>a[data-target="navigation"] {
+/* .responsive-tools>a[data-target="navigation"] {
   display: none;
-}
+} */
 
 .top-navigation-bar-menu li a {
   line-height: 1;
 }
 
 /* hide the original menu until it's replaced with the new one - prevent blinking */
-#navigation {
+/* #navigation {
   height: 46px;
   visibility: hidden;
-}
+} */
 
 .btn.cart-count::before, a.btn.cart-count::before, .header-top .cart-count span {
   color: white;
